@@ -1,4 +1,4 @@
-<?php // get digit in number
+<?php // get digit in number with php-cli arg values.
 
 function getNinM($arr)
 {
@@ -12,12 +12,12 @@ function getNinM($arr)
 	$digits = strlen($m);
 
 	if((int)$m <= 0)
-		echo "Parameter not a number!";
+		return "Parameter not a number!";
 	elseif($n > $digits)
-		echo "The number doesn't have $n digits!";
+		return "The number doesn't have $n digits!";
 	else
-		echo $p ? $m[$digits-$n] : $m[$n-1];
+		return $p ? $m[$digits-$n] : $m[$n-1];
 }
 
 if($argc > 1)
-	getNinM($argv);
+	echo getNinM($argv);
